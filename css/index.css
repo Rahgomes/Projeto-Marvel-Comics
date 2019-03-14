@@ -1,7 +1,8 @@
 * {
-    font-size: 10px; /* Para se basear por "em". */
+    font-size: 10px;
 }
 
+/* CONFIGURAÇÃO MENU MOBILE */
 .head {
     position: relative;
     display: grid;
@@ -38,45 +39,36 @@
     stroke: #fff;
     fill: #22262a;
 }
+/* FIM CONFIGURAÇÃO MENU MOBILE */
 
-.slider {
+/* CONTEÚDO SLIDER PRINCIPAL */
+.slider, .slider-figure {
     background-color: #151515;
 }
 
-.slider-figure {
-    /* height: 100vh; */
-    /* overflow: hidden; */
-    background-color: #151515;
-    height: 200px;
+.slider-figure, .slider-image {
     width: 100%;
+}
+
+.slider-figure {
+    height: 200px;
     position: relative;
 }
 
 .slider-image {
-    width: 100%;
     height: 100%;
     background-position: top;
     background-size: cover;
     background-image: url("../images/captainmarvel.jpg");
 }
 
-/* .image2 {
-    background-image: url("../images/capmarv.jpg");
-} */
-
 .slider-content {
     margin: 50px 0 0;
-    padding: 0 30px 20px;
-}
-
-.image_wrapper {
-    overflow: hidden;
+    padding: 0 30px 220px;
 }
 
 .slider_headline {
     color: #fff;
-    padding: 0;
-    display: block;
     font-family: "DINNextW01-CondensedMedium", "Trebuchet MS", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     font-size: 2.8em;
@@ -90,18 +82,18 @@
 
 .cta-btn {
     background-color: #e62429;
-    box-sizing: border-box;
     padding: 15px 45px;
     text-transform: uppercase;
     color: #fff;
-    text-align: center;
     line-height: 16px;
     font-size: 1.5em;
     font-weight: 600;
     font-family: "DINNextW01-CondensedMedium", "Trebuchet MS", Helvetica, Arial, sans-serif;
     display: inline-block;
 }
+/* FIM CONTEÚDO SLIDER PRINCIPAL */
 
+/* IMAGEM HERO, LOGO E CTAs */
 .hero {
     position: relative;
     width: 100%;
@@ -111,9 +103,11 @@
     clip-path: polygon(0 0,0 100%,100% 92%,100% 0);
 }
 
-.image-hero {
+.image-hero, .content-hero {
     position: relative;
-    width: 100%;
+}
+
+.image-hero {
     height: 280px;
     background-position: top;
     background-repeat: no-repeat;
@@ -123,9 +117,7 @@
 }
 
 .content-hero {
-    position: relative;
     padding: 100px 0 60px;
-    width: 100%;
 }
 
 .align-img {
@@ -135,61 +127,57 @@
 
 .description_content-hero {
     margin: 0 0 25px;
-    line-height: 1.5;
     color: #fff;
-    font: normal 14px/22px "DIN Next W01 Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font: normal 14px/22px "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
 }
 
 .cta-btn-light {
     background-color: #151515;
-    box-sizing: border-box;
     cursor: pointer;
     font-weight: 700;
     border: 1px solid #fff;
     display: inline-block;
 }
+/* FIM IMAGEM HERO, LOGO E CTAs */
 
-.hero-container {
-    padding: 30px;
-}
-
-
-
+/* CARD MOVIES E COMICS*/
 .movie-scenes, .article-comics {
     padding: 5px 0 0;
 }
 
-.container-card {
-    display: grid;
-    justify-content: space-around;
+.container-card, .hero-container {
     padding: 30px;
 }
 
 .card {
-    position: relative;
-    display: grid;
     grid-row-gap: 20px;
-    grid-auto-columns: 57%;
-    /* justify-content: space-around; */
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;    
+}
+
+.card-title, .card-description {
+    font-size: 1.4em;
+    cursor: pointer;
 }
 
 .card-title {
     color: #e62429;
     font-family: "DINNextW01-CondensedMedium", "Trebuchet MS", Helvetica, Arial, sans-serif;
-    font-size: 1.4em;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 .card-description {
     color: #151515;
-    font-family: "DIN Next W01 Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
     font-weight: 700;
-    font-size: 1.4em;
-    cursor: pointer;
+    line-height: 18px;
 }
+/* FIM CARD MOVIES E COMICS*/
 
-.image-hero2 {
+/* IMAGEM HERO MARVEL 80s, TEXTO E CTA */
+.image-hero-80s {
     position: relative;
     width: 100%;
     height: 280px;
@@ -214,10 +202,9 @@
 .div-80years {
     padding-top: 60px;
 }
+/* FIM IMAGEM HERO MARVEL 80s, TEXTO E CTA */
 
-
-
-
+/* SECTION FEATURED CHARACTERS */
 .featured-characters {
     padding: 10px 0 0;
 }
@@ -235,30 +222,31 @@
 }
 
 .h3-title {
-    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
     font-size: 3em;
-    font-weight: 400;
     letter-spacing: 2px;
-    text-transform: uppercase;
     padding: 20px 0;
 }
 
 .slider_wrapper {
     overflow: hidden;
     height: 100%;
-    /* margin-left: 30px;  */
+}
+
+.card, .card_v2 {
+    position: relative;
+    display: grid;
 }
 
 .card_v2 {
-    position: relative;
-    display: grid;
     grid-row-gap: 0;
-    /* justify-content: space-around; */
+}
+
+.fig-card, .fig-img {
+    position: relative;
+    overflow: hidden;
 }
 
 .fig-card {
-    position: relative;
-    overflow: hidden;
     height: 170px;
 }
 
@@ -275,9 +263,7 @@
 .fig-img {
     transform: scaleX(1);
     transition: all .2s linear;
-    overflow: hidden;
     object-position: top center;
-    position: relative;
     display: block;
     object-fit: cover;
     width: 100%;
@@ -295,46 +281,32 @@
 
 .body-card-headline {
     color: #fff;
-    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
     font-size: 1.8em;
     letter-spacing: 1px;
     line-height: 18px;
+}
+
+.h3-title, .body-card-headline, .footer-lineText {
     text-transform: uppercase;
-    text-align: left;
+    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
 }
 
 .footer-card {
     position: absolute;
     bottom: 17px;
-    text-align: left;
     padding: 16px 24px 0 0;
 }
 
 .footer-lineText {
     color: #c3c3c3;
-    text-transform: uppercase;
-    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
     font-size: 1.1em;
     letter-spacing: 1px;
     line-height: 12px;
     transition: all .17s ease-in-out;
 }
 
-.card-title {
-    padding: 0 0 30px;
-}
-
 .card-feed {
     display: grid;
     grid-template-columns: 1fr;
 }
-
-
-.img-wrapper {
-    min-width: 100%;
-    max-width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-position: 50%;
-}
+/* FIM SECTION FEATURED CHARACTERS */
