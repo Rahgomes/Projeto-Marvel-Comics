@@ -155,24 +155,25 @@
 
 
 
-.movie-scenes {
+.movie-scenes, .article-comics {
     padding: 5px 0 0;
 }
 
-.container-card-movie-scenes {
+.container-card {
     display: grid;
     justify-content: space-around;
     padding: 30px;
 }
 
-.card-movie-scenes {
+.card {
+    position: relative;
     display: grid;
     grid-row-gap: 20px;
     grid-auto-columns: 57%;
     /* justify-content: space-around; */
 }
 
-.card-movie-scenes-title {
+.card-title {
     color: #e62429;
     font-family: "DINNextW01-CondensedMedium", "Trebuchet MS", Helvetica, Arial, sans-serif;
     font-size: 1.4em;
@@ -180,7 +181,7 @@
     text-transform: uppercase;
 }
 
-.card-movie-scenes-description {
+.card-description {
     color: #151515;
     font-family: "DIN Next W01 Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -217,3 +218,123 @@
 
 
 
+.featured-characters {
+    padding: 10px 0 0;
+}
+
+.slider-feat {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1240px;
+    overflow: hidden;
+    transition: .3s ease;
+}
+
+.title-content {
+    padding: 0 0 0 20px;
+}
+
+.h3-title {
+    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 3em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+.slider_wrapper {
+    overflow: hidden;
+    height: 100%;
+    /* margin-left: 30px;  */
+}
+
+.card_v2 {
+    position: relative;
+    display: grid;
+    grid-row-gap: 0;
+    /* justify-content: space-around; */
+}
+
+.fig-card {
+    position: relative;
+    overflow: hidden;
+    height: 170px;
+}
+
+.fig-card:after {
+    content: "";
+    height: 4px;
+    background-color: #e62429;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.fig-img {
+    transform: scaleX(1);
+    transition: all .2s linear;
+    overflow: hidden;
+    object-position: top center;
+    position: relative;
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.body-card {
+    background-color: #151515;
+    color: #37474f;
+    transition: color .3s;
+    position: relative;
+    height: 145px;
+    padding: 16px 24px 17px 16px;
+}
+
+.body-card-headline {
+    color: #fff;
+    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.footer-card {
+    position: absolute;
+    bottom: 17px;
+    text-align: left;
+    padding: 16px 24px 0 0;
+}
+
+.footer-lineText {
+    color: #c3c3c3;
+    text-transform: uppercase;
+    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    line-height: 12px;
+    transition: all .17s ease-in-out;
+}
+
+.card-title {
+    padding: 0 0 30px;
+}
+
+.card-feed {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+.img-wrapper {
+    min-width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: 50%;
+}
