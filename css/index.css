@@ -21,6 +21,70 @@
     align-content: center;
 }
 
+/* CLASSES E IDs JS - MENU MOBILE TOGGLE */
+#nav, .navigation, #nav-close {
+    display: none;
+}
+
+.navigation, .mobile-nav, .nav-close {
+    z-index: 80;
+}
+
+.navigation, .mobile-nav {
+    left: 0;
+    top: 0;
+}
+
+.navigation {
+    height: 100vh;
+    width: 100vw;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+}
+
+.mobile-nav, .nav-close {
+    background-color: #22262a;
+    position: absolute;
+}
+
+.mobile-nav {
+    width: 100%;
+    display: block;
+}
+
+.mobile-nav-container {
+    width: 100%;
+    padding: 0;
+}
+
+.nav-close {
+    padding: 20px 30px;
+    max-width: 375px;;
+}
+
+.icon-svg-white-stroke {
+    stroke: #fff;
+}
+
+.menu-nav-item {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 15px 0;
+    margin-top: 60px;
+    margin-bottom: -60px;
+    color: #fff;
+    cursor: default;
+    display: grid;
+    grid-template-columns: 70% 10%;
+    justify-content: space-around;
+    font: normal 18px/24px "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+.icon-svg-red-stroke {
+    stroke: #e62429;
+}
+/* FIM CLASSES E IDs JS - MENU MOBILE TOGGLE */
+
 .color-svg-menu {
     fill: #fff;
 }
@@ -338,6 +402,15 @@
     font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.error-getError {
+    color: #ff0000;
+    font-size: 1.5em;
+    font-weight: 700;
+    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    display: grid;
+    justify-content: center;
 }
 /* FIM CLASSES MAIN JS */
 
