@@ -115,11 +115,22 @@
     position: relative;
 }
 
-.slider-image {
+.slider-image, .slider-image2, .slider-image3 {
     height: 100%;
     background-position: top;
     background-size: cover;
+}
+
+.slider-image {
     background-image: url("../images/captainmarvel.jpg");
+}
+
+.slider-image2 {
+    background-image: url("../images/capmarv.jpg");
+}
+
+.slider-image3 {
+    background-image: url("../images/cloakdagger.jpg");
 }
 
 .slider-content {
