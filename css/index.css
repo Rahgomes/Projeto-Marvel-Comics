@@ -12,9 +12,12 @@
     height: 52px;
 }
 
-.mobile-menu {
+.mobile-menu, .logo {
     display: grid;
     justify-content: center;
+}
+
+.mobile-menu {
     align-content: center;
 }
 
@@ -22,22 +25,15 @@
     fill: #fff;
 }
 
-.logo {
-    display: grid;
-    justify-content: center;
+.search, .color-svg-search {
+    stroke: #fff;
+    fill: #22262a;
 }
 
 .search {
     display: grid;
     justify-content: center;
     align-content: center;
-    stroke: #fff;
-    fill: #22262a;
-}
-
-.color-svg-search {
-    stroke: #fff;
-    fill: #22262a;
 }
 /* FIM CONFIGURAÇÃO MENU MOBILE */
 
@@ -206,7 +202,7 @@
 
 /* SECTION FEATURED CHARACTERS */
 .featured-characters {
-    padding: 10px 0 0;
+    padding: 10px 0 30px 0;
 }
 
 .slider-feat {
@@ -224,7 +220,7 @@
 .h3-title {
     font-size: 3em;
     letter-spacing: 2px;
-    padding: 20px 0;
+    padding: 20px 0px 50px 0;
 }
 
 .slider_wrapper {
@@ -310,3 +306,31 @@
     grid-template-columns: 1fr;
 }
 /* FIM SECTION FEATURED CHARACTERS */
+
+.data-comics {
+    display: grid;
+    justify-content: center;
+    grid-row-gap: 10px;
+}
+
+.comics-layout {
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+.comics-title {
+    color: #151515;
+    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    line-height: 18px;
+    padding: 0 0 5px;
+}
+
+.comics-price {
+    color: #999;
+    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 1.6em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
