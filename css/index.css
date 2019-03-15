@@ -307,21 +307,27 @@
 }
 /* FIM SECTION FEATURED CHARACTERS */
 
-.data-comics {
+/* CLASSES MAIN JS */
+.data-comics, .comics-layout {
     display: grid;
+}
+
+.data-comics {
     justify-content: center;
     grid-row-gap: 10px;
 }
 
 .comics-layout {
-    display: grid;
     grid-row-gap: 20px;
+}
+
+.comics-title, .comics-price {
+    font-size: 1.6em;
 }
 
 .comics-title {
     color: #151515;
     font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
-    font-size: 1.6em;
     font-weight: 700;
     line-height: 18px;
     padding: 0 0 5px;
@@ -330,11 +336,12 @@
 .comics-price {
     color: #999;
     font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
-    font-size: 1.6em;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+/* FIM CLASSES MAIN JS */
 
+/* FOOTER LOGO E MENU */
 .foot {
     background-color: #151515;
     width: 100%;
@@ -342,8 +349,11 @@
     padding-bottom: 38px;
 }
 
-.main-footer-content {
+.main-footer-content, .main-footer-link {
     display: block;
+}
+
+.main-footer-content {
     width: 100%;
     max-width: 1240px;
     padding-right: 30px;
@@ -356,12 +366,14 @@
     padding-bottom: 26px;
     margin-bottom: 40px;
     text-align: left;
+}
 
+.main-footer-logo, .main-footer-column {
+    display: grid;
 }
 
 .main-footer-logo {
     margin-bottom: 30px;
-    display: grid;
     justify-content: center;
 }
 
@@ -370,19 +382,16 @@
     fill: #151515;
 }
 
-.main-footer-primary-links {
+.main-footer-primary-links, .main-footer-secondary-links {
     font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
-    font-weight: 800;
     display: inline-block;
 }
 
-.main-footer-secondary-links {
-    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
-    display: inline-block;
+.main-footer-primary-links {
+    font-weight: 800;
 }
 
 .main-footer-link {
-    display: block;
     font-size: 13px;
     font-weight: lighter;
     letter-spacing: 1px;
@@ -398,10 +407,11 @@
 }
 
 .main-footer-column {
-    display: grid;
     grid-template-columns: 50% 50%;
 }
+/* FIM FOOTER LOGO E MENU */
 
+/* FOOTER REDES SOCIAIS */
 .main-footer-follow {
     border-bottom: #282828;
     padding-bottom: 40px;
@@ -437,3 +447,4 @@
 .icon-svg-gray-fill {
     fill: #999;
 }
+/* FIM FOOTER REDES SOCIAIS */
