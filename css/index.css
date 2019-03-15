@@ -334,3 +334,106 @@
     letter-spacing: 1px;
     text-transform: uppercase;
 }
+
+.foot {
+    background-color: #151515;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 38px;
+}
+
+.main-footer-content {
+    display: block;
+    width: 100%;
+    max-width: 1240px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0 auto;
+}
+
+.main-footer-links {
+    border-bottom: 1px solid #282828;
+    padding-bottom: 26px;
+    margin-bottom: 40px;
+    text-align: left;
+
+}
+
+.main-footer-logo {
+    margin-bottom: 30px;
+    display: grid;
+    justify-content: center;
+}
+
+.icon-svg {
+    width: 35px;
+    fill: #151515;
+}
+
+.main-footer-primary-links {
+    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.main-footer-secondary-links {
+    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    display: inline-block;
+}
+
+.main-footer-link {
+    display: block;
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.main-footer-link:not(:last-of-type) {
+    margin-bottom: 25px;
+}
+
+.main-footer-link a {
+    color: #fff;
+}
+
+.main-footer-column {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.main-footer-follow {
+    border-bottom: #282828;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.main-footer-title {
+    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.4em;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.social-links {
+    display: grid;
+    grid-template-rows: 1px;
+    grid-template-columns: 12% 12% 12% 12% 12% 12% 12%;
+    justify-content: space-between;
+}
+
+.footer-social-img {
+    line-height: 1;
+    padding: 0;
+    margin-top: 30px;
+    display: inline-block;
+}
+
+.icon-svg-gray-fill {
+    fill: #999;
+}

@@ -7,8 +7,6 @@ var marvel = {
             var dtComics = "";
             var priceLabel = "Price: $";
 
-            console.log(data.data.results)
-
                 dtComics += "<div class='data-comics'>";
                 dtComics += "<a href='" +data.data.results[0].urls[0].url+"'target='_blank'>";
                 dtComics += " <img src='"+data.data.results[0].thumbnail.path +"/portrait_fantastic."+data.data.results[0].thumbnail.extension+"' />";
