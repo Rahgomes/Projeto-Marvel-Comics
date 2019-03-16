@@ -3,10 +3,14 @@
 }
 
 /* CONFIGURAÇÃO MENU MOBILE */
+.desktopNav-container {
+    display: none;
+}
+
 .head {
     position: relative;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 15% 15% 15%;
     justify-content: space-between;
     background-color: #22262a;
     height: 52px;
@@ -115,7 +119,7 @@
     position: relative;
 }
 
-.slider-image, .slider-image2, .slider-image3 {
+.slider-image, .slider-image2, .slider-image3, .slider-image4, .slider-image5 {
     height: 100%;
     background-position: top;
     background-size: cover;
@@ -131,6 +135,14 @@
 
 .slider-image3 {
     background-image: url("../images/cloakdagger.jpg");
+}
+
+.slider-image4 {
+    background-image: url("../images/goose.jpg");
+}
+
+.slider-image5 {
+    background-image: url("../images/avngrs_swps.jpg");
 }
 
 .slider-content {
@@ -163,6 +175,12 @@
     display: inline-block;
 }
 /* FIM CONTEÚDO SLIDER PRINCIPAL */
+
+/* IMG ADVERTISEMENT xD */
+.adv-xD {
+    display: none;
+}
+/* FIM IMG ADVERTISEMENT xD */
 
 /* IMAGEM HERO, LOGO E CTAs */
 .hero {
@@ -224,7 +242,7 @@
     grid-row-gap: 20px;
     justify-content: center;
     margin: 0 auto;
-    width: 50%;    
+    width: 50%;
 }
 
 .card-title, .card-description {
@@ -390,6 +408,7 @@
 .data-comics {
     justify-content: center;
     grid-row-gap: 10px;
+    grid-auto-columns: min-content;
 }
 
 .comics-layout {
@@ -471,6 +490,10 @@
     display: inline-block;
 }
 
+.list {
+    width: 100%;
+}
+
 .main-footer-primary-links {
     font-weight: 800;
 }
@@ -496,6 +519,10 @@
 /* FIM FOOTER LOGO E MENU */
 
 /* FOOTER REDES SOCIAIS */
+.hidden-mobile {
+    display: none;
+}
+
 .main-footer-follow {
     border-bottom: #282828;
     padding-bottom: 40px;
@@ -532,3 +559,447 @@
     fill: #999;
 }
 /* FIM FOOTER REDES SOCIAIS */
+
+@media (min-width: 375px) {
+    .slider-figure {
+        height: 290px;
+    }
+
+    .card {
+        width: 34%;
+    }
+}
+
+@media (min-width: 394px) {
+    .cta-link {
+        display: inline-block;
+    }
+
+    .slider_headline {
+        display: block;
+    }
+}
+
+@media (min-width: 601px) {
+    .slider-figure {
+        height: 400px;
+    }
+
+    .image-hero {
+        height: 440px;
+    }
+
+    .image-hero-80s {
+        height: 440px;
+    }
+
+    .title-hero {
+        font-size: 4em;
+    }
+
+    .fig-card {
+        height: 210px;
+    }
+
+    .card {
+        width: 24%;
+    }
+
+    .comics-layout {
+        grid-template-columns: 40% 40%;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 701px) {
+    .comics-layout {
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 839px) {
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .head {
+        display: none;
+    }
+
+    /* HEADER DESK */
+    .desktopNav-container {
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+
+    .desktopNav {
+        width: 100%;
+        position: relative;
+        background-color: #22262a;
+        color: #fff;
+        font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+    } 
+
+    .desktopNav-upper {
+        height: 52px;
+        border-bottom: 1px solid #393939;
+        padding: 0 20px;
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .desktopNav-tabLogoContainer {
+        max-width: 1200px;
+        margin: auto;
+        width: 100%;
+        box-sizing: border-box;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        display: flex;
+    }
+
+    .insider.desktopNav_tabContainer {
+        z-index: 1;
+    }
+
+    .desktopNav_tab {
+        display: inline-flex;
+        box-sizing: border-box;
+        border-left: 1px solid #393939;
+        border-right: 1px solid #393939;
+        height: 51px;
+        font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 16px;
+        text-transform: uppercase;
+    }
+    
+    .desktopNav_tab:hover {
+        background: #151515;
+    }
+
+    .user-menu {
+        position: relative;
+        display: block;
+        font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    }
+
+    .user-menu-profile {
+        height: 51px;
+        display: inline-flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+        text-transform: uppercase;
+        color: #fff;
+        padding: 0 25px;
+        cursor: pointer;
+    }
+
+    .user-menu-avatar {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        margin: 0 8px 0 0;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .user-menu-avatarMsg {
+        font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 16px;
+        text-transform: uppercase;
+    }
+
+    .points {
+        color: #e8b63e;
+    }
+
+    .points span {
+        font-size: 9px;
+    }
+
+    .fillSvg {
+        fill: #fff;
+    }
+
+    .desktopNav-logo {
+        -webkit-box-pack: center;
+        justify-content: center;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 52px;
+        width: 130px;
+        /* display: flex; */
+    }
+
+    .icon-svg {
+        fill: #151515;
+    }
+
+    .desktopNav-right-links {
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        box-orient: horizontal;
+        box-direction: normal;
+        flex-direction: row;
+        z-index: 1;
+        font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 16px;
+        text-transform: uppercase;
+    }
+
+    .desktopNav_tab.mastercard {
+        line-height: .9;
+        -webkit-box-align: center;
+        align-items: center;
+        border-right: none;
+        color: #fff;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .icon-svg-black-stroke {
+        stroke: #151515;
+    }
+
+    .desktopNav_tab.mastercard svg {
+        height: 17px;
+        margin-right: 10px;
+        margin-top: 1px;
+    }
+
+    .desktopNav_tab.search {
+        -webkit-box-align: center;
+        align-items: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .desktopNav_tab.search span.icon-search {
+        width: 19px;
+        height: 17px;
+    }
+
+    .icon-svg.icon-search {
+        fill: none;
+    }
+    
+    .icon-svg-black-stroke {
+        stroke: #151515;
+    }
+
+    .icon-svg-card {
+        width: 40px;
+    }
+
+    .desktopNav_tab.search svg {
+        width: 19px;
+        height: 17px;
+        stroke: #fff;
+    }
+
+    .desktopNav-lower {
+        height: 40px;
+        text-align: center;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .desktopNav-linkContainer {
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .desktopNav-linkWrapper {
+        text-transform: uppercase;
+        font-weight: 800;
+        padding: 0 18px;
+        margin: 0 auto;
+        cursor: pointer;
+        list-style: none;
+    }
+
+    .desktopNav-link {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        height: 100%;
+        box-sizing: border-box;
+        border-bottom: 2px solid transparent;
+        font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 16px;
+        text-transform: uppercase;
+        background-color: #22262a;
+        color: #fff;
+    }
+    /* FIM HEADER DESK */
+
+    /* CONTEÚDO SLIDER PRINCIPAL */
+    .slider {
+        position: relative;
+    }
+
+    .slider-figure {
+        position: relative;
+        width: 100%;
+        min-height: 410px;
+        max-height: 640px;
+        height: 63vh;
+        order: inherit;    
+    }
+
+    .slider-content {
+        position: absolute;
+        top: 20%;
+        left: 0;
+    }
+
+    .slider_headline {
+        font-size: 5em;
+    }
+    /* FIM CONTEÚDO SLIDER PRINCIPAL */
+
+    /* IMG ADVERTISEMENT xD */
+    .adv-xD {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    /* FIM IMG ADVERTISEMENT xD */
+
+    /* IMAGEM HERO, LOGO E CTAs */
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        clip-path: none;
+    }
+
+    .hero:before {
+        border-bottom: 500px solid #151515;
+        border-right: 160px solid transparent;
+        content: '';
+        height: 0;
+        left: 48.99%;
+        position: absolute;
+        transition: .5s ease;
+        width: 0;
+        z-index: 1;
+    }
+
+    .image-hero {
+        width: 50%;
+        height: 500px;
+        background-position: 50%;
+        float: right;
+    }
+
+    .content-hero {
+        padding: 0;
+        position: absolute;
+        top: 30%;
+        left: 15%;
+    }
+
+    .hero-container {
+        position: absolute;
+        top: 55%;
+        left: 5%;
+    }
+
+    .description_content-hero {
+        line-height: 1.5;
+        width: 60%;
+        margin: 0 0 35px;
+        font-size: 18px;
+    }
+
+    .cta-btn-light {
+        background-color: #151515;
+    }
+    /* FIM IMAGEM HERO, LOGO E CTAs */
+
+    /* IMAGEM HERO MARVEL 80s, TEXTO E CTA */
+    .image-hero-80s {
+        width: 50%;
+        height: 500px;
+        background-position: 50%;
+        float: right;
+    }
+
+    .title-hero {
+        width: 60%;
+        font-size: 4em;
+        line-height: 1;
+    }
+
+    .div-80years {
+        position: absolute;
+        top: 25%;
+    }
+    /* FIM IMAGEM HERO MARVEL 80s, TEXTO E CTA */
+
+    /* FOOTER LOGO E MENU */
+    .main-footer-links {
+        border-bottom: none;
+        padding-bottom: 0;
+        display: grid;
+        grid-template-columns: 20% 40% 39%;
+    }
+
+    .icon-svg {
+        width: 80px;
+    }
+
+    .list {
+        width: 50%;
+        line-height: 15px;
+    }
+    /* FIM FOOTER LOGO E MENU */
+
+    /* FOOTER REDES SOCIAIS */
+    .hidden-desk{
+        display: none;
+    }
+    
+    .hidden-mobile {
+        display: block;
+    }
+    /* FIM FOOTER REDES SOCIAIS */
+}
+
+
+
+
+
+
+
+
+

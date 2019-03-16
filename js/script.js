@@ -112,23 +112,24 @@ menu.menuMobile();
 var slider = {
     sliderCarousel: function(){
         var imagesSlider = document.querySelector("#images-slider");
-        var classesSlider, i, interval;
+        var classesSlider, i;
 
         function init(){
-            interval = setInterval(changeSlider, 5000);
+            setInterval(changeSlider, 4000);
             i = 0;
-            classesSlider = ["slider-image", "slider-image2", "slider-image3"];
+            classesSlider = ["slider-image", "slider-image2", "slider-image3", "slider-image4", "slider-image5"];
         }
         init();
 
         function changeSlider(){
             imagesSlider.setAttribute("class", classesSlider[i]);
-            i++
+            i++;
 
             if( i>=classesSlider.length ) {
                 i=0;
             }
         }
+        
     }
 };
 
