@@ -7,30 +7,18 @@ var marvel = {
             var dtComics = "";
             var priceLabel = "Price: $";
 
-                dtComics += "<div class='data-comics'>";
-                dtComics += "<a href='" +data.data.results[0].urls[0].url+"'target='_blank'>";
-                dtComics += " <img src='"+data.data.results[0].thumbnail.path +"/portrait_fantastic."+data.data.results[0].thumbnail.extension+"' />";
-                dtComics += "</a>";
-                dtComics += "<h3 class='comics-title'>" +data.data.results[0].title+ "</h3>";
-                dtComics += "<p class='comics-price'>" + priceLabel +data.data.results[0].prices[0].price+ "</p>";
-                dtComics += "</div>";
+            for(var i = 0; i<data.data.results.length; i++){
+                var element = data.data.results[i];
 
                 dtComics += "<div class='data-comics'>";
-                dtComics += "<a href='" +data.data.results[8].urls[0].url+"'target='_blank'>";
-                dtComics += " <img src='"+data.data.results[8].thumbnail.path +"/portrait_fantastic."+data.data.results[8].thumbnail.extension+"' />";
+                dtComics += "<a href='" +element.urls[0].url+"'target='_blank'>";
+                dtComics += " <img src='"+element.thumbnail.path +"/portrait_fantastic."+element.thumbnail.extension+"' />";
                 dtComics += "</a>";
-                dtComics += "<h3 class='comics-title'>" +data.data.results[8].title+ "</h3>";
-                dtComics += "<p class='comics-price'>" + priceLabel +data.data.results[8].prices[0].price+ "</p>";
+                dtComics += "<h3 class='comics-title'>" +element.title+ "</h3>";
+                dtComics += "<p class='comics-price'>" + priceLabel +element.prices[0].price+ "</p>";
                 dtComics += "</div>";
-
-                dtComics += "<div class='data-comics'>";
-                dtComics += "<a href='" +data.data.results[17].urls[0].url+"'target='_blank'>";
-                dtComics += " <img src='"+data.data.results[17].thumbnail.path +"/portrait_fantastic."+data.data.results[17].thumbnail.extension+"' />";
-                dtComics += "</a>";
-                dtComics += "<h3 class='comics-title'>" +data.data.results[17].title+ "</h3>";
-                dtComics += "<p class='comics-price'>" + priceLabel +data.data.results[17].prices[0].price+ "</p>";
-                dtComics += "</div>";
-
+            }
+            
             comics.innerHTML = dtComics;
         }
 

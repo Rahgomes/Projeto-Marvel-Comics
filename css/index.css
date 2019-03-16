@@ -2,6 +2,7 @@
     font-size: 10px;
 }
 
+@media (min-width: 360px){
 /* CONFIGURAÇÃO MENU MOBILE */
 .desktopNav-container {
     display: none;
@@ -231,11 +232,16 @@
 
 /* CARD MOVIES E COMICS*/
 .movie-scenes, .article-comics {
-    padding: 5px 0 0;
+    padding: 5px 0 0 80px;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-column-gap: 170px;
+    overflow: hidden;
+    overflow: scroll;
 }
 
 .container-card, .hero-container {
-    padding: 30px;
+    padding: 30px 60px;
 }
 
 .card {
@@ -319,6 +325,24 @@
 .slider_wrapper {
     overflow: hidden;
     height: 100%;
+
+
+}
+
+.slider_container {
+    position: relative;
+    max-width: 1240px;
+    top: 17px;
+    margin: -17px 0 0;
+    padding: 10px 30px 0;
+    display: block;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    z-index: 10;
+
+    display: grid;
+    grid-template-columns: 16% 16% 16% 16% 16% 16%;
+    grid-column-gap: 150px;
 }
 
 .card, .card_v2 {
@@ -328,6 +352,7 @@
 
 .card_v2 {
     grid-row-gap: 0;
+    width: 180px;
 }
 
 .fig-card, .fig-img {
@@ -382,7 +407,7 @@
 
 .footer-card {
     position: absolute;
-    bottom: 17px;
+    bottom: 30px;
     padding: 16px 24px 0 0;
 }
 
@@ -405,14 +430,18 @@
     display: grid;
 }
 
-.data-comics {
-    justify-content: center;
-    grid-row-gap: 10px;
-    grid-auto-columns: min-content;
-}
-
 .comics-layout {
     grid-row-gap: 20px;
+    grid-column-gap: 175px;
+    grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    padding: 10px 30px 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.data-comics {
+    grid-row-gap: 10px;
+    grid-auto-columns: min-content;
 }
 
 .comics-title, .comics-price {
@@ -559,6 +588,8 @@
     fill: #999;
 }
 /* FIM FOOTER REDES SOCIAIS */
+
+}
 
 @media (min-width: 375px) {
     .slider-figure {
