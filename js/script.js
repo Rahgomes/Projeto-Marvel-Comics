@@ -12,7 +12,7 @@ var marvel = {
 
                 dtComics += "<div class='data-comics'>";
                 dtComics += "<a href='details-comics.html'target='_self'>";
-                dtComics += " <img src='"+element.thumbnail.path +"/portrait_fantastic."+element.thumbnail.extension+"' />";
+                dtComics += " <img class='effect-comics' src='"+element.thumbnail.path +"/portrait_fantastic."+element.thumbnail.extension+"' />";
                 dtComics += "</a>";
                 dtComics += "<h3 class='comics-title'>" +element.title+ "</h3>";
                 dtComics += "<p class='comics-price'>" + priceLabel +element.prices[0].price+ "</p>";

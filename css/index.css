@@ -316,9 +316,36 @@
 }
 
 .h3-title {
+    position: relative;
     font-size: 3em;
     letter-spacing: 2px;
     padding: 20px 0px 50px 0;
+}
+
+.h3-title:before {
+    background-color:#c6a972;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    -webkit-transform: rotate(-45deg) skewX(45deg);
+    transform: rotate(-45deg) skewX(45deg);
+    width: 25px;
+    top: 5px;
+    left: 51px;
+}
+
+.h3-title:after {
+    background-color:#c6a972;
+    content: "";
+    display: block;
+    height: 2px;
+    position: absolute;
+    -webkit-transform: rotate(-45deg) skewX(45deg);
+    transform: rotate(-45deg) skewX(45deg);
+    width: 20px;
+    top: 55px;
+    left: 1px;
 }
 
 .slider_wrapper {
@@ -1077,6 +1104,33 @@
 }
 
 @media (min-width: 992px) {
+    .cta-btn:hover {
+        background-color: #851014;
+    }
+
+    .cta-btn-light:hover {
+        background-color: transparent;
+        border: 1px solid rgb(59, 59, 59);
+    }
+
+    .card-description:hover {
+        color: #e62429;
+    }
+
+    .body-card:hover {
+        background-color: #e62429;
+        transition: .5s ease;
+    }
+
+    .effect-comics {
+        transition: .3s ease-out;
+    }
+
+    .effect-comics:hover {
+        transform: translateY(-10px);
+        transition: .1s ease-in;
+    }
+    
     .movie-scenes, .article-comics {
         grid-column-gap: 0px;
         padding: 5px 0 0 0px;
@@ -1104,9 +1158,15 @@
 }
 
 @media (min-width: 1100px) {
-    .slider-image, .slider-image2, .slider-image3, .slider-image4, .slider-image5 {
+    .slider-image, .slider-image3, .slider-image4 {
         height: 100%;
         background-position: center center;
+        background-size: cover;
+    }
+
+    .slider-image2, .slider-image5 {
+        height: 100%;
+        background-position: top;
         background-size: cover;
     }
 
