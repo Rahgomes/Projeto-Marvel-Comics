@@ -2,7 +2,6 @@
     font-size: 10px;
 }
 
-@media (min-width: 360px){
 /* CONFIGURAÇÃO MENU MOBILE */
 .desktopNav-container {
     display: none;
@@ -299,7 +298,7 @@
 }
 /* FIM IMAGEM HERO MARVEL 80s, TEXTO E CTA */
 
-/* SECTION FEATURED CHARACTERS */
+/* FEATURED CHARACTERS */
 .featured-characters {
     padding: 10px 0 30px 0;
 }
@@ -325,8 +324,6 @@
 .slider_wrapper {
     overflow: hidden;
     height: 100%;
-
-
 }
 
 .slider_container {
@@ -339,7 +336,6 @@
     overflow-x: scroll;
     overflow-y: hidden;
     z-index: 10;
-
     display: grid;
     grid-template-columns: 16% 16% 16% 16% 16% 16%;
     grid-column-gap: 150px;
@@ -423,7 +419,7 @@
     display: grid;
     grid-template-columns: 1fr;
 }
-/* FIM SECTION FEATURED CHARACTERS */
+/* FIM FEATURED CHARACTERS */
 
 /* CLASSES MAIN JS */
 .data-comics, .comics-layout {
@@ -589,15 +585,17 @@
 }
 /* FIM FOOTER REDES SOCIAIS */
 
-}
-
 @media (min-width: 375px) {
     .slider-figure {
         height: 290px;
     }
 
-    .card {
-        width: 34%;
+    .slider_container {
+        grid-column-gap: 120px;
+    }
+
+    .card_v2 {
+        width: 150px;
     }
 }
 
@@ -608,6 +606,14 @@
 
     .slider_headline {
         display: block;
+    }
+
+    .slider_container {
+        grid-column-gap: 100px;
+    }
+
+    .card_v2 {
+        width: 130px;
     }
 }
 
@@ -628,29 +634,61 @@
         font-size: 4em;
     }
 
-    .fig-card {
-        height: 210px;
+    .card_v2 {
+        width: 150px;
     }
 
-    .card {
-        width: 24%;
+    .fig-card {
+        height: 190px;
+    }
+
+    .slider_container {
+        grid-column-gap: 80px;
+    }
+
+    .body-card {
+        height: 180px;
     }
 
     .comics-layout {
-        grid-template-columns: 40% 40%;
-        justify-content: space-around;
+        grid-column-gap: 160px;
+    }
+
+    .movie-scenes, .article-comics {
+        grid-column-gap: 110px;
+    }
+
+    .main-footer-links {
+        display: grid;
+        grid-template-columns: 25% 50%;
+    }
+
+    .icon-svg {
+        width: 80px;
     }
 }
 
 @media (min-width: 701px) {
+    .slider_container {
+        grid-column-gap: 95px;
+    }
+
+    .card_v2 {
+        width: 180px;
+    }
+
     .comics-layout {
-        grid-template-columns: 30% 30% 30%;
-        justify-content: space-around;
+        grid-column-gap: 155px;
+    }
+}
+
+@media (min-width: 801px) {
+    .card_v2 {
+        width: 195px;
     }
 }
 
 @media (min-width: 839px) {
-
     .mobile-menu {
         display: none;
     }
@@ -775,7 +813,6 @@
         right: 0;
         height: 52px;
         width: 130px;
-        /* display: flex; */
     }
 
     .icon-svg {
@@ -977,6 +1014,13 @@
     }
     /* FIM IMAGEM HERO, LOGO E CTAs */
 
+    /* CARD MOVIES E COMICS*/
+    .movie-scenes {
+        padding: 5px 0 0 30px;
+        grid-column-gap: 30px;
+    }
+    /* CARD MOVIES E COMICS*/
+
     /* IMAGEM HERO MARVEL 80s, TEXTO E CTA */
     .image-hero-80s {
         width: 50%;
@@ -997,16 +1041,31 @@
     }
     /* FIM IMAGEM HERO MARVEL 80s, TEXTO E CTA */
 
+
+
+    /* ARTICLE */
+    .article-comics {
+        padding: 5px 0 0 30px;
+        grid-column-gap: 30px;
+    }
+    /* ARTICLE */
+
+    /* FEATURED CHARACTERS */
+    .slider_container {
+        grid-column-gap: 10px;
+    }
+
+    .card_v2 {
+        width: 120px;
+    }
+    /* FIM FEATURED CHARACTERS */
+
     /* FOOTER LOGO E MENU */
     .main-footer-links {
         border-bottom: none;
         padding-bottom: 0;
         display: grid;
         grid-template-columns: 20% 40% 39%;
-    }
-
-    .icon-svg {
-        width: 80px;
     }
 
     .list {
