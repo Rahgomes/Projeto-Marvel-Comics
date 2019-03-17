@@ -1,45 +1,55 @@
-var marvel = {
-    apiComics: function() {
+var marvelComics = {
+    apiComicsDetails: function() {
         var url = "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=a0f7499a748ecc9ccf5d6ba49f97f070&hash=579bc9130b862062da736eb1c261869b";
-        var comics = document.querySelector("#marvelComics");
+        var titleComics = document.querySelector("#titleApi");
 
-        var getComics = function(data) {
-            var dtComics = "";
-            var priceLabel = "Price: $";
+        var getTitle = function(data) {
+            var dtTitle = "";
+            var dtThumb = "";
+            var dtPublish = "";
+            var dtPenciler = "";
+            var dtPrice = "";
 
-            for(var i = 0; i<data.data.results.length; i++){
-                var element = data.data.results[i];
+            var element = data.data.results[0];
 
-                dtComics += "<div class='data-comics'>";
-                dtComics += "<a href='details-comics.html'target='_self'>";
-                dtComics += " <img src='"+element.thumbnail.path +"/portrait_fantastic."+element.thumbnail.extension+"' />";
-                dtComics += "</a>";
-                dtComics += "<h3 class='comics-title'>" +element.title+ "</h3>";
-                dtComics += "<p class='comics-price'>" + priceLabel +element.prices[0].price+ "</p>";
-                dtComics += "</div>";
-            }
+            dtTitle += "<h3 class='title-comics-api'>" + data.data.results[0].title + "</h3>";
+
+            dtThumb = " <img class='thumb' src='" + element.thumbnail.path + "/portrait_fantastic." + element.thumbnail.extension+"' />";
             
-            comics.innerHTML = dtComics;
+            dtPublish += "<p class='tt-comics'> Published: </p>";
+            dtPublish += "<span class='content-comics'>" + element.dates[1].date + "</span>";
+
+            dtPenciler += "<p class='tt-comics'> Penciler: </p>";
+            dtPenciler += "<span class='content-comics'>" + element.creators.items[0].name + "</span>";
+
+            dtPrice = "<p class='value-digital-comics'> Digital Issue: $" + element.prices[0].price + "</p>";
+            
+            //Apenas o Título criei variável através do querySelector, os demais campos puxei diretamente pelo ID.
+            titleComics.innerHTML = dtTitle;
+            thumbApi.innerHTML = dtThumb;
+            publishApi.innerHTML = dtPublish;
+            pencilerApi.innerHTML = dtPenciler;
+            priceApi.innerHTML = dtPrice;
         }
 
         var getError = function() {
-            comics.innerHTML = "Sorry, something bad happened";
+            titleComics.innerHTML = "Sorry, something bad happened";
 
             if(getComics){
-                comics.classList.add("error-getError");
+                titleComics.classList.add("error-getError");
             }
         }
         
         $.ajax({
             url: url, 
             type: "GET",
-            success: getComics,
+            success: getTitle,
             error: getError
         });
     }
 };
 
-marvel.apiComics();
+marvelComics.apiComicsDetails();
 
 var menu = {
     menuMobile: function(){
@@ -95,30 +105,3 @@ var menu = {
 };
 
 menu.menuMobile();
-
-
-var slider = {
-    sliderCarousel: function(){
-        var imagesSlider = document.querySelector("#images-slider");
-        var classesSlider, i;
-
-        function init(){
-            setInterval(changeSlider, 4000);
-            i = 0;
-            classesSlider = ["slider-image", "slider-image2", "slider-image3", "slider-image4", "slider-image5"];
-        }
-        init();
-
-        function changeSlider(){
-            imagesSlider.setAttribute("class", classesSlider[i]);
-            i++;
-
-            if( i>=classesSlider.length ) {
-                i=0;
-            }
-        }
-        
-    }
-};
-
-slider.sliderCarousel();

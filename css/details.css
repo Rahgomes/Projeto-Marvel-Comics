@@ -1,0 +1,166 @@
+@import url("index.css");
+
+/* CORPO COM IMAGEM TÍTULOS E DESCRIÇÕES */
+.title-comics-api, .tt-comics {
+    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
+}
+
+.back-Api-comics {
+    background-color: #000;
+    color: #fff;
+    padding: 30px;
+}
+
+.title-comics-api {
+    font-weight: normal;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.header-comics {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 40px 0;
+}
+
+.thumb {
+    width: 80%;   
+}
+
+.space-comics {
+    padding-bottom: 20px;
+}
+
+.hidden-about {
+    display: none;
+}
+
+.tt-comics {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.content-comics {
+    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+/* FIM CORPO COM IMAGEM TÍTULOS E DESCRIÇÕES */
+
+/* PARTE DE COMBRA DA REVISTA EM QUADRINHOS */
+.purchase-comic, .purchase-content, .digital-comics-btn {
+    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+.purchase-title, .value-digital-comics {
+    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
+}
+
+.purchase-comic, .value-comic, .digital-comics-btn {
+    display: grid;
+}
+
+.purchase-title, .value-digital-comics, .digital-comics-btn {
+    text-transform: uppercase;
+}
+
+.purchase-comic {
+    width: 80wh;
+    background-color: #e1e1e1;
+    color: #202020;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.purchase-title {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.purchase-content {
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 30px;
+}
+
+.value-comic {
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.value-digital-comics {
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    padding-bottom: 15px;
+}
+
+.digital-comics-btn {
+    background-color: #e62429;
+    padding: 15px 45px;
+    color: #fff;
+    line-height: 16px;
+    font-size: 1.5em;
+    font-weight: 600;
+    justify-content: center;
+    align-content: center;
+}
+/* FIM PARTE DE COMBRA DA REVISTA EM QUADRINHOS */
+
+@media (min-width: 601px) {
+    .purchase-comic, .value-comic {
+        justify-content: start;
+    }
+
+    .purchase-title, .purchase-content {
+        text-align: left;
+    }
+
+    .purchase-title, .value-comic {
+        padding-left: 30px;
+    }
+    
+    .value-comic {
+        grid-template-columns: 30% 70%;
+    }
+    
+    .digital-comics-btn {
+        align-self: center;
+    }
+}
+
+@media (min-width: 940px) {
+    .hidden-about {
+        display: block;
+    }
+
+    .format-about {
+        font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .digital-comics-btn:hover {
+        background-color: #860d11;
+    }
+}
+
+@media (min-width: 992px) {
+    .purchase-comic, .purchase-align {
+        display: grid;
+    }
+
+    .purchase-comic {
+        grid-template-columns: 40% 40%;
+        justify-content: space-evenly;
+        padding: 30px 0;
+    }
+
+    .purchase-align {
+        justify-content: center;
+        align-content: center;
+    }
+}
