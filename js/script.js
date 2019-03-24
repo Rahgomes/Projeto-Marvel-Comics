@@ -11,11 +11,11 @@ var marvel = {
                 var element = data.data.results[i];
 
                 dtComics += "<div class='data-comics'>";
-                dtComics += "<a href='details-comics.html'target='_self'>";
-                dtComics += " <img class='effect-comics' src='"+element.thumbnail.path +"/portrait_fantastic."+element.thumbnail.extension+"' />";
-                dtComics += "</a>";
+                dtComics += "<a class='space-comics' href='details-comics.html'target='_self'>";
+                dtComics += "<img class='effect-comics' src='"+element.thumbnail.path +"/portrait_fantastic."+element.thumbnail.extension+"' />";
                 dtComics += "<h3 class='comics-title'>" +element.title+ "</h3>";
                 dtComics += "<p class='comics-price'>" + priceLabel +element.prices[0].price+ "</p>";
+                dtComics += "</a>";
                 dtComics += "</div>";
             }
             
