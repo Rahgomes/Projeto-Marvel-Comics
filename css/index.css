@@ -173,6 +173,7 @@
     font-weight: 600;
     font-family: "DINNextW01-CondensedMedium", "Trebuchet MS", Helvetica, Arial, sans-serif;
     display: inline-block;
+    clip-path: polygon(0% 35%, 15% 0%, 85% 0%, 100% 0, 100% 15%, 100% 65%, 85% 100%, 15% 100%, 0 100%, 0% 85%);
 }
 /* FIM CONTEÚDO SLIDER PRINCIPAL */
 
@@ -231,13 +232,27 @@
 
 /* CARD MOVIES E COMICS*/
 .movie-scenes, .article-comics {
-    padding: 5px 0 0 80px;
+    margin-bottom: 20px;
     display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-column-gap: 170px;
+    grid-template-columns: 65% 65% 65% 65%;
     overflow-x: scroll;
     overflow-y: hidden;
 }
+
+/* CONFIGURAÇÕES SCROLLBAR */
+::-webkit-scrollbar {
+    height: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e5e5e5; 
+    height: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e62429; 
+}
+/* FIM CONFIGURAÇÕES SCROLLBAR */
 
 .container-card, .hero-container {
     padding: 30px 60px;
@@ -245,7 +260,7 @@
 
 .card {
     grid-row-gap: 20px;
-    justify-content: center;
+    justify-content: space-around;
     margin: 0 auto;
     width: 50%;
 }
@@ -376,6 +391,7 @@
 .card_v2 {
     grid-row-gap: 0;
     width: 180px;
+    clip-path: polygon(100% 0, 100% 92%, 87% 100%, 0 100%, 0 0);
 }
 
 .fig-card, .fig-img {
@@ -639,6 +655,10 @@
         grid-column-gap: 100px;
     }
 
+    .movie-scenes, .article-comics {
+        grid-template-columns: 60% 60% 60% 60%;
+    }
+
     .card_v2 {
         width: 130px;
     }
@@ -682,7 +702,7 @@
     }
 
     .movie-scenes, .article-comics {
-        grid-column-gap: 110px;
+        grid-template-columns: 40% 40% 40% 40%;
     }
 
     .main-footer-links {
@@ -707,11 +727,19 @@
     .comics-layout {
         grid-column-gap: 155px;
     }
+
+    .movie-scenes, .article-comics {
+        grid-template-columns: 35% 35% 35% 35%;
+    }
 }
 
 @media (min-width: 801px) {
     .card_v2 {
         width: 195px;
+    }
+
+    .movie-scenes, .article-comics {
+        grid-template-columns: 30% 30% 30% 30%;
     }
 }
 
@@ -1043,8 +1071,7 @@
 
     /* CARD MOVIES E COMICS*/
     .movie-scenes, .article-comics {
-        padding: 5px 0 0 30px;
-        grid-column-gap: 30px;
+        grid-template-columns: 28% 28% 28% 28%;
     }
     /* CARD MOVIES E COMICS*/
 
@@ -1130,10 +1157,9 @@
         transform: translateY(-10px);
         transition: .1s ease-in;
     }
-    
+
     .movie-scenes, .article-comics {
-        grid-column-gap: 0px;
-        padding: 5px 0 0 0px;
+        grid-template-columns: 25% 25% 25% 25%;
         overflow: hidden;
     }
 
@@ -1182,6 +1208,10 @@
 @media (min-width: 1300px) {
     .slider_container {
         grid-column-gap: 17px;
+    }
+    
+    .movie-scenes, .article-comics {
+        grid-template-columns: 25% 25% 25% 25%;
     }
 
     .card_v2 {
