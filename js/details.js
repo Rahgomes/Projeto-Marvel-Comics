@@ -23,13 +23,13 @@ var marvelComics = {
             dtPublish += "<span class='content-comics'>" + element.dates[1].date + "</span>";
 
             dtWriter += "<p class='tt-comics'> Writer: </p>";
-            dtWriter += "<span class='content-comics'>" + element.creators.items[8].name + "</span>";
+            dtWriter += "<span class='content-comics'>" + element.creators.items[0].name + "</span>";
 
             dtPenciler += "<p class='tt-comics'> Penciler: </p>";
-            dtPenciler += "<span class='content-comics'>" + element.creators.items[7].name + "</span>";
+            dtPenciler += "<span class='content-comics'>" + element.creators.items[2].name + "</span>";
 
             dtEditor += "<p class='tt-comics'> Editor: </p>";
-            dtEditor += "<span class='content-comics'>" + element.creators.items[10].name + "</span>";
+            dtEditor += "<span class='content-comics'>" + element.creators.items[1].name + "</span>";
 
             dtPrice += "<p class='value-digital-comics'> Digital Issue: $" + element.prices[0].price + "</p>";
 
@@ -102,13 +102,13 @@ var ComicsDetails = {
             var editor = "";
 
             writer = "<span class='str-details'>Writer: </span>";
-            writer += "<span class='noStr-details'>" + element.creators.items[8].name + "</span>";
+            writer += "<span class='noStr-details'>" + element.creators.items[0].name + "</span>";
 
             penciler = "<span class='str-details'>Penciler: </span>";
-            penciler += "<span class='noStr-details'>" + element.creators.items[7].name + "</span>";
+            penciler += "<span class='noStr-details'>" + element.creators.items[2].name + "</span>";
 
             editor = "<span class='str-details'>Editor: </span>";
-            editor += "<span class='noStr-details'>" + element.creators.items[10].name + "</span>";
+            editor += "<span class='noStr-details'>" + element.creators.items[1].name + "</span>";
 
             mdWriter.innerHTML = writer;
             mdPenciler.innerHTML = penciler;
@@ -121,7 +121,7 @@ var ComicsDetails = {
             var coverPenciler = "";
 
             coverWriter = "<span class='str-details'>Writer (cover): </span>";
-            coverWriter += "<span class='noStr-details'>" + element.creators.items[9].name + "</span>";
+            coverWriter += "<span class='noStr-details'>" + element.creators.items[1].name + "</span>";
 
             coverPenciler = "<span class='str-details'>Penciler (cover): </span>";
             coverPenciler += "<span class='noStr-details'>" + element.creators.items[2].name + "</span>";
