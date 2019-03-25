@@ -1,14 +1,117 @@
 @import url("index.css");
 
+/* TOP BAR  */
+.detail-top-bar-wrap{
+    background: #444;
+    height: auto;
+}
+
+.detail-top-bar{
+    background-color: #151515;
+    color: #fff;
+    text-transform: uppercase;
+    height: 45px;
+    border-width: 0;
+}
+
+.detail-container {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.detail-top-bar-lft{
+    line-height: 42px;
+    color: #fff;
+    text-transform: uppercase;
+    vertical-align: top;
+    position: relative;
+    z-index: 2;
+    float: left;
+    padding: 0 8px 0 5px;
+    margin-top: 1px;
+    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+.icon-backto{
+    display: inline-block;
+    height: 25px;
+    vertical-align: middle;
+    line-height: 25px;
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    margin-top: -2px;
+}
+
+.icon-backto::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 24px;
+    background-image: url(https://i.annihil.us/u/prod/marvel/images/sprites/Arrow_Left_2x.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+
+.detail-top-bar-rgt{
+    line-height: 42px;
+    color: #fff;
+    text-shadow: 2px 2px 0 #000;
+    text-transform: uppercase;
+    vertical-align: top;
+    float: right;
+    padding-top: 6px;
+}
+
+.detail-top-bar-lft span{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.iconSocial{
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.icon-svg-color{
+    fill: #fff;
+}
+
+.fb-container{
+    display: inline-block;
+}
+
+.background-comic{
+    background: #000;
+    color: #fff;
+}
+
+.grid-flex-comic{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* FIM TOP BAR  */
+
 /* CORPO COM IMAGEM TÍTULOS E DESCRIÇÕES */
 .title-comics-api, .tt-comics {
     font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
 }
 
 .back-Api-comics {
+    position: relative;
     background-color: #000;
     color: #fff;
     padding: 30px;
+}
+
+.bg-image {
+    display: none;
 }
 
 .title-comics-api {
@@ -107,8 +210,59 @@
     font-weight: 600;
     justify-content: center;
     align-content: center;
+    clip-path: polygon(0% 25%, 5% 0%, 85% 0%, 100% 0, 100% 15%, 100% 75%, 95% 100%, 15% 100%, 0 100%, 0% 85%);
 }
 /* FIM PARTE DE COMBRA DA REVISTA EM QUADRINHOS */
+
+/* INÍCIO MORE DETAILS */
+.moreDetails-Api-Comics {
+    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    position: relative;
+    background-color: #202020;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.mDetails-title {
+    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #dcdcdc;
+    padding: 30px 0;
+}
+
+.mdetails-subtitle {
+    font-family: "DINNextW01-CondensedMedium","Trebuchet MS",Helvetica,Arial,sans-serif;
+    color: #999;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.mdetails-list {
+    display: grid;
+    grid-row-gap: 5px;
+    padding-bottom: 20px;
+}
+
+.str-details {
+    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    color: #dcdcdc;
+    font-size: 1.4em;
+}
+
+.noStr-details {
+    font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+    color: #dcdcdc;
+    font-size: 1.4em;
+}
+/* FIM MORE DETAILS */
 
 @media (min-width: 601px) {
     .purchase-comic, .value-comic {
@@ -130,11 +284,29 @@
     .digital-comics-btn {
         align-self: center;
     }
+
+    .mDetails-container {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-column-gap: 20px;
+    }
 }
 
 @media (min-width: 940px) {
+    .detail-top-bar-lft:hover {
+        background-color: #303030;
+    }
+
+    .back-Api-comics {
+        padding-bottom: 250px;
+    }
+
     .hidden-about {
         display: block;
+    }
+
+    .thumb {
+        width: 75%;
     }
 
     .format-about {
@@ -146,9 +318,57 @@
     .digital-comics-btn:hover {
         background-color: #860d11;
     }
+
+    .moreDetails-Api-Comics {
+        font-family: "DINNextW01-Regular", "Trebuchet MS", Helvetica, Arial, sans-serif;
+        background-color: #202020;
+        padding: 200px 30px 100px;
+        margin: 0 auto;
+    }
+
+    .purchase-comic {
+        width: 90%;
+        padding: 100px 0;
+        position: absolute;
+        bottom: -150px;
+        left: 5%;
+        z-index: 1;
+    }
 }
 
 @media (min-width: 992px) {
+    .back-Api-comics {
+        padding-bottom: 150px;
+    }
+
+    .bg-image {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+    }
+
+    .bg-image img {
+        width: 100%;
+        filter: blur(1rem);
+        height: 200vh;
+        background-color: transparent;
+        -webkit-mask-box-image: none;
+        opacity: .18;
+    }
+
+    .thumb {
+        width: 65%;
+        display: grid;
+        margin: 0 auto;
+    }
+
     .purchase-comic, .purchase-align {
         display: grid;
     }
@@ -156,11 +376,16 @@
     .purchase-comic {
         grid-template-columns: 40% 40%;
         justify-content: space-evenly;
-        padding: 30px 0;
+        padding: 60px 0;
     }
 
     .purchase-align {
         justify-content: center;
         align-content: center;
+    }
+
+    .foot {
+        position: relative;
+        z-index: 1;
     }
 }

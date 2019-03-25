@@ -242,6 +242,7 @@
 /* CONFIGURAÇÕES SCROLLBAR */
 ::-webkit-scrollbar {
     height: 3px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -1234,8 +1235,3 @@
         padding: 0;
     }
 }
-
-
-
-
-
